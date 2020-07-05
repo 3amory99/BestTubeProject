@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Shashah</string>
+
+    <string-array name="video_categories">
+        <item>Games</item>
+        <item>Sports</item>
+        <item>Love</item>
+        <item>Religious</item>
+        <item>Children</item>
+    </string-array>
+
+</resources>
