@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shashah</string>
+    <string name="home">الرئيسية</string>
+    <string name="love">حب</string>
+    <string name="children">أطفال</string>
+    <string name="games">العاب</string>
+    <string name="religious">ديني</string>
+    <string name="search">بحث</string>
+    <string name="content">المحتوي</string>
+    <string name="main">"أخري"</string>
+    <string name="language">اللغة</string>
+    <string name="share">مشاركة التطبيق</string>
+    <string name="help_privacy">المساعدة والخصوصية</string>
+    <string name="choose_language">أختار اللغة</string>
+    <string name="version_1_0">أصدار النسخة 1.0</string>
+    <string name="delete_video">هل تريد حذف هذا الفيديو ؟</string>
+    <string name="cancel">ٳلغاء</string>
+    <string name="delete">مسح</string>
+    <string name="internet_connection">الأتصال بالانترنت</string>
+    <string name="no_internet_connection_found">لا يوجد أتصال بالانترنت تأكد من اتصالك بالانترنت</string>
+    <string name="add_Video">أضافة فيديو</string>
+    <string name="video_title">عنوان الفيديو</string>
+    <string name="video_description">وصف للفيديو</string>
+    <string name="description_hint">أكتب وصف للفيديو الخاص بك</string>
+    <string name="Video_Hash_tags">هاشتاج الفيديو</string>
+    <string name="hello_blank_fragment">Hello</string>
+    <string name="try_again">حاول مجدداً</string>
+    <string name="connected">متصل بالانترنت</string>
+    <string name="not_connected">غير متصل بالانترنت</string>
+
+
+
+    <!--    <string-array name="video_categories">-->
+    <!--        <item>منوعات</item>-->
+    <!--        <item>حب</item>-->
+    <!--        <item>العاب</item>-->
+    <!--        <item>ديني</item>-->
+    <!--        <item>أطفال</item>-->
+    <!--        <item>رياضة</item>-->
+    <!--    </string-array>-->
+
+</resources>

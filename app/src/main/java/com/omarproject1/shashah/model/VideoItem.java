@@ -1,4 +1,4 @@
-package com.omarproject1.shashah;
+package com.omarproject1.shashah.model;
 
 public class VideoItem {
 

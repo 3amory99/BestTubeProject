@@ -21,37 +21,54 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
     //Firebase libraries
-    implementation 'com.google.firebase:firebase-analytics:17.4.3'
-    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
     implementation 'com.google.firebase:firebase-storage:19.1.1'
-    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-database:19.3.1'
     implementation 'com.firebaseui:firebase-ui-database:6.2.0'
 
+    // circular images library
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //Material Design
     implementation 'com.google.android.material:material:1.1.0'
 
 //    //picasso library
 //    implementation 'com.squareup.picasso:picasso:2.71828'
+
 //    //OkHttp Library
 //    implementation("com.squareup.okhttp3:okhttp:4.6.0")
 
-//    //Exoplayer libraries
-//    implementation 'com.google.android.exoplayer:exoplayer:2.10.8'
-//    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.8'
-//    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.8'
-//    implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.8'
-//    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.10.8'
-//    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.8'
+    //Exoplayer libraries
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.8'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.8'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.8'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.8'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.10.8'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.8'
+
+
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.8'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.8'
+
 }

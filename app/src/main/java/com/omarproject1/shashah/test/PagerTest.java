@@ -1,4 +1,4 @@
-package com.omarproject1.shashah;
+package com.omarproject1.shashah.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -8,27 +8,32 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.omarproject1.shashah.R;
+import com.omarproject1.shashah.VideoAdapter;
+import com.omarproject1.shashah.model.VideoItem;
+import com.omarproject1.shashah.upload.UploadActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class PagerTest extends AppCompatActivity {
 
     FloatingActionButton addVideo;
+    ViewPager2 viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_pager_test);
         addVideo=findViewById(R.id.add_btn);
         addVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), UploadActivity.class));
+                startActivity(new Intent(PagerTest.this, UploadActivity.class));
             }
         });
-        final ViewPager2 viewPager = findViewById(R.id.videosPager);
+
+        viewPager = findViewById(R.id.videosPager);
         List<VideoItem> videoItems = new ArrayList<>();
 
         VideoItem item1 = new VideoItem();
@@ -72,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
         item7.videoTitle = "Love";
         item7.videoDescription = "The best thing to hold onto in life is each other.";
         videoItems.add(item7);
+
+        VideoItem item8 = new VideoItem();
+        item8.videoUrl = "https://firebasestorage.googleapis.com/v0/b/shashah-47b13.appspot.com/o/video%2F1594174789231.mp4?alt=media&token=f9ca3ba5-5663-4210-acc2-d6e05e2cd93d";
+        item8.videoTitle = "Love";
+        item8.videoDescription = "The best thing to hold onto in life is each other.";
+        videoItems.add(item8);
 
 
         viewPager.setAdapter(new VideoAdapter(videoItems));

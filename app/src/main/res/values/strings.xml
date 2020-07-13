@@ -1,12 +1,52 @@
 <resources>
     <string name="app_name">Shashah</string>
+    <string name="home">Home</string>
+    <string name="love">Love</string>
+    <string name="children">Children</string>
+    <string name="games">Games</string>
+    <string name="religious">Religious</string>
+    <string name="search">Search</string>
+    <string name="content">Content</string>
+    <string name="main">"Options Menu"</string>
+    <string name="language">Language</string>
+    <string name="share">Share</string>
+    <string name="help_privacy">Help and Privacy</string>
+    <string name="choose_language">Chosse language</string>
+    <string name="version_1_0">Version 1.0</string>
+
+    <!--    <string-array name="video_categories">-->
+    <!--        <item>منوعات</item>-->
+    <!--        <item>حب</item>-->
+    <!--        <item>العاب</item>-->
+    <!--        <item>ديني</item>-->
+    <!--        <item>أطفال</item>-->
+    <!--        <item>رياضة</item>-->
+    <!--    </string-array>-->
 
     <string-array name="video_categories">
-        <item>Games</item>
-        <item>Sports</item>
+        <item>Mono3at</item>
         <item>Love</item>
+        <item>Games</item>
         <item>Religious</item>
         <item>Children</item>
+
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="delete_video">Do you want to delete this video ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="internet_connection">Internet Connection</string>
+    <string name="no_internet_connection_found">No Internet connection found check your connection</string>
+
+    <string name="add_Video">Add Video</string>
+    <string name="video_title">Video Title</string>
+    <string name="video_description">Video Description</string>
+    <string name="description_hint">Write a description to your video…</string>
+    <string name="Video_Hash_tags">Video Hash tags</string>
+    <string name="hello_blank_fragment">Hello</string>
+    <string name="try_again">Try Again</string>
+    <string name="connected">Internet is connected Successfully.</string>
+    <string name="not_connected">No Internet Connected.</string>
+
 
 </resources>

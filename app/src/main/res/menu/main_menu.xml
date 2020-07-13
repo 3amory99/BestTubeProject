@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/navigation_children"
+        android:icon="@drawable/ic_child"
+        android:title="@string/children" />
+    <item
+        android:id="@+id/navigation_love"
+        android:icon="@drawable/ic_like"
+        android:title="@string/love" />
+
+    <item
+        android:id="@+id/navigation_games"
+        android:icon="@drawable/ic_games"
+        android:title="@string/games" />
+    <item
+        android:id="@+id/navigation_religious"
+        android:icon="@drawable/ic_religious"
+        android:title="@string/religious" />
+</menu>

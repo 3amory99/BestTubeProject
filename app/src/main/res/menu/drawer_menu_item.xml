@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/home_item"
+            android:title="@string/home"
+            android:icon="@drawable/ic_home"
+            />
+
+        <item android:id="@+id/search_item"
+            android:title="@string/search"
+            android:icon="@drawable/ic_search"/>
+
+
+    </group>
+
+    <item android:title="@string/content">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/religious_item"
+                    android:title="@string/religious"
+                    android:icon="@drawable/ic_religious" />
+
+                <item android:id="@+id/games_item"
+                    android:title="@string/games"
+                    android:icon="@drawable/ic_games"/>
+
+                <item android:id="@+id/love_item"
+                    android:title="@string/love"
+                    android:icon="@drawable/ic_like"/>
+
+                <item android:id="@+id/children_item"
+                    android:title="@string/children"
+                    android:icon="@drawable/ic_child"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Share">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/share_item"
+                    android:title="Share"
+                    android:icon="@drawable/ic_share"/>
+
+                <item android:id="@+id/nav_info"
+                    android:title="Info"
+                    android:icon="@drawable/ic_about"/>
+
+            </group>
+
+        </menu>
+    </item>
+</menu>
