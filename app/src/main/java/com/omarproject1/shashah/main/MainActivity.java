@@ -30,6 +30,7 @@ import com.omarproject1.shashah.R;
 import com.omarproject1.shashah.connectivity.ConnectivityReceiver;
 import com.omarproject1.shashah.connectivity.MyApp;
 import com.omarproject1.shashah.connectivity.OfflineActivity;
+import com.omarproject1.shashah.video.MainActivity2;
 import com.omarproject1.shashah.upload.UploadActivity;
 import com.omarproject1.shashah.main.fragments.ChildrenFragment;
 import com.omarproject1.shashah.main.fragments.GamesFragment;
@@ -144,14 +145,14 @@ public class MainActivity extends AppCompatActivity implements ConnectivityRecei
             @Override
             public void onClick(View view) {
 //                Toast.makeText(MainActivity.this, "Upload a new Video", Toast.LENGTH_SHORT).show();
+                closeFabsMenu();
                 startActivity(new Intent(MainActivity.this, UploadActivity.class));
-                finish();
             }
         });
         secondFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Edit Action", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
             }
         });
 

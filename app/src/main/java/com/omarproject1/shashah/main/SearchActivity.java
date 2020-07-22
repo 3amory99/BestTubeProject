@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
 import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,22 +20,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.omarproject1.shashah.R;
 import com.omarproject1.shashah.VideoHolder;
 import com.omarproject1.shashah.model.VideoItem;
+import com.omarproject1.shashah.video.VerticalSpacingItemDecorator;
+import com.omarproject1.shashah.video.VideoPlayerViewHolder;
+import com.omarproject1.shashah.video.VideoRecyclerView;
+import com.omarproject1.shashah.video.VideoRecyclerViewAdapter;
+
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class SearchActivity extends AppCompatActivity {
 
-    private DatabaseReference reference;
-    private RecyclerView recyclerView;
-    private FirebaseRecyclerOptions<VideoItem> recyclerOptions;
-    private FirebaseRecyclerAdapter<VideoItem, VideoHolder> recyclerAdapter;
+    private DatabaseReference searchReference;
+    private VideoRecyclerView searchRecyclerView;
+    private VideoPlayerViewHolder myViewHolder;
+    private VideoRecyclerViewAdapter adapter;
+    private ArrayList<VideoItem> itemArrayList;
+    SnapHelper snapHelper;
+
     ImageView playerIcon;
     TextView playerTxt;
     String oldResult;
@@ -43,60 +60,25 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         initiation();
+
     }
 
     private void initiation() {
 
-        recyclerView = findViewById(R.id.search_recyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        reference = FirebaseDatabase.getInstance().getReference("video").child("mono3at");
+        searchRecyclerView = findViewById(R.id.recycler_view_search);
+        searchRecyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        searchRecyclerView.setLayoutManager(layoutManager);
+        searchReference = FirebaseDatabase.getInstance().getReference("video").child("mono3at");
+        VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(10);
+        searchRecyclerView.addItemDecoration(itemDecorator);
+        myViewHolder = new VideoPlayerViewHolder(getWindow().getDecorView().getRootView());
+        itemArrayList = new ArrayList<>();
+        snapHelper = new PagerSnapHelper();
         playerIcon = findViewById(R.id.video_player_icon);
         playerTxt = findViewById(R.id.video_player_text);
     }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        if (oldResult == null) {
-//            searchProgressBar.setVisibility(View.INVISIBLE);
-//        } else {
-//            oldResult = getIntent().getStringExtra("SearchResult");
-//            Query query = reference.orderByChild("search").startAt(oldResult).endAt(oldResult + "\uf8ff");
-//            recyclerOptions = new FirebaseRecyclerOptions.Builder<VideoItem>()
-//                    .setQuery(query, VideoItem.class)
-//                    .build();
-//            recyclerAdapter = new FirebaseRecyclerAdapter<VideoItem, VideoHolder>(recyclerOptions) {
-//                @Override
-//                protected void onBindViewHolder(@NonNull VideoHolder holder, int position, @NonNull VideoItem model) {
-//                    holder.setExoplayer(getApplication(), model.getVideoTitle(), model.getVideoDescription(), model.getHashTags(), model.getVideoUrl());
-//                    if (holder.description.length() < 100) {
-//                        holder.showMore.setVisibility(View.GONE);
-//                    }
-//                    holder.showMore.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View view) {
-//                            if (holder.description.length() > 100) {
-//                                holder.showMore.setText("Show less");
-//                                TransitionManager.beginDelayedTransition(holder.cardView, new AutoTransition());
-//                            } else {
-//                            }
-//
-//                        }
-//                    });
-//                }
-//
-//                @NonNull
-//                @Override
-//                public VideoHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//                    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.video_item_main_activity, parent, false);
-//                    return new VideoHolder(view);
-//                }
-//            };
-//            recyclerAdapter.startListening();
-//            recyclerView.setAdapter(recyclerAdapter);
-//        }
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -124,42 +106,37 @@ public class SearchActivity extends AppCompatActivity {
     private void searchInsideActivity(String searchText) {
 
         String updatedResult = searchText.toLowerCase().trim();
-        Query query = reference.orderByChild("search").startAt(updatedResult).endAt(oldResult + "\uf8ff");
-        recyclerOptions = new FirebaseRecyclerOptions.Builder<VideoItem>()
-                .setQuery(query, VideoItem.class)
-                .build();
-        recyclerAdapter = new FirebaseRecyclerAdapter<VideoItem, VideoHolder>(recyclerOptions) {
+        Query query = searchReference.orderByChild("search").startAt(updatedResult).endAt(oldResult + "\uf8ff");
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            protected void onBindViewHolder(@NonNull VideoHolder holder, int position, @NonNull VideoItem model) {
-                holder.setExoplayer(getApplication(), model.getVideoTitle(), model.getVideoDescription(), model.getHashTags(), model.getVideoUrl());
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (!snapshot.hasChildren()) {
+                    playerIcon.setVisibility(View.VISIBLE);
+                    playerTxt.setVisibility(View.VISIBLE);
+//                    Toast.makeText(SearchActivity.this, ""+getResources().getString(R.string.no_videos_founded), Toast.LENGTH_SHORT).show();
+                }
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    VideoItem videoItem = dataSnapshot.getValue(VideoItem.class);
+                    itemArrayList.add(videoItem);
+                }
                 playerIcon.setVisibility(View.GONE);
                 playerTxt.setVisibility(View.GONE);
-                if (holder.description.length() < 100) {
-                    holder.showMore.setVisibility(View.GONE);
-                }
-                holder.showMore.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if (holder.description.length() > 100) {
-                            holder.showMore.setText("Show less");
-                            TransitionManager.beginDelayedTransition(holder.cardView, new AutoTransition());
-                        } else {
-                        }
+                adapter = new VideoRecyclerViewAdapter(SearchActivity.this, itemArrayList);
+                searchRecyclerView.setMediaItems(itemArrayList);
+                adapter.notifyDataSetChanged();
+                searchRecyclerView.setAdapter(adapter);
+                snapHelper.attachToRecyclerView(searchRecyclerView);
 
-                    }
-                });
             }
 
-            @NonNull
             @Override
-            public VideoHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.video_item_main_activity, parent, false);
-                return new VideoHolder(view);
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("SearchResult",""+error.getMessage());
+//                Toast.makeText(SearchActivity.this, ""+getResources().getString(R.string.no_videos_founded), Toast.LENGTH_SHORT).show();
+                playerIcon.setVisibility(View.VISIBLE);
+                playerTxt.setVisibility(View.VISIBLE);
             }
-        };
-        recyclerAdapter.startListening();
-        recyclerView.setAdapter(recyclerAdapter);
-
+        });
 
     }
 }

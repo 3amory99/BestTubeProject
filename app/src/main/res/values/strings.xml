@@ -47,6 +47,33 @@
     <string name="try_again">Try Again</string>
     <string name="connected">Internet is connected Successfully.</string>
     <string name="not_connected">No Internet Connected.</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="mono3at_intro_title">Welcome to Shashah App</string>
+    <string name="mono3at_intro_description">Easily, You can now watch videos and with higher speed and high accuracy as wellً.</string>
+    <string name="children_intro_title">Leave the fun and enjoyment to your child</string>
+    <string name="children_intro_description">Our new and special content is able to shape your child\'s mind for creativity by inspiring targeted videos.</string>
+    <string name="games_intro_title">The most interesting and exciting gaming videos</string>
+    <string name="games_intro_description">Exclusively follow the professional gamers and also watch the popular PUBG videos.</string>
+    <string name="religious_intro_title">Decline the world and raise the voice of the Qur\'an through religious videos</string>
+    <string name="religious_intro_description">Watch and listen to the most beautiful voices and islamic chants through our platform for some Qur\'an readers and islamic chants.</string>
+    <string name="love_intro_title">Watch and download WhatsApp status videos and enjoy songs and music</string>
+    <string name="love_intro_description">The most romantic videos of 2020 Watch and download now the most famous WhatsApp status videos.</string>
+    <string name="post_detatils">Post Details</string>
+    <string name="start_downloading">Start downloading video..</string>
+    <string name="download">Download</string>
+    <string name="download_content">Shashah app that allows you to download videos to your phone easily with just one click. Watch the amazing videos through the application. What are you waiting for!</string>
+    <string name="video_name">Video Name</string>
+    <string name="this_page_has_no_videos">This page has no videos to show</string>
+    <string name="video_uploaded">Video Uploaded Successfully</string>
+    <string name="search_diff">Enter a few words to search in Shashah App</string>
+    <string name="no_videos_founded">No Videos founded</string>
+    <string name="video_already_deleted">This video has already been deleted, refresh this page!</string>
+    <string name="no_selected_videos">No selected videos</string>
+    <string name="something_go_wrong_on_finding_any_videos">Something go wrong on finding any videos</string>
+    <string name="enter_video_title">Enter video title</string>
+    <string name="enter_video_description">Enter video description</string>
+    <string name="failed_on_uploading">Failed on uploading</string>
 
 
 </resources>

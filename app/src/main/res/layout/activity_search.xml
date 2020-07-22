@@ -7,24 +7,20 @@
     tools:context=".main.SearchActivity">
 
 
-<!--    <ProgressBar-->
-<!--        android:id="@+id/progress_circle_search"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/search_recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.omarproject1.shashah.video.VideoRecyclerView
+            android:id="@+id/recycler_view_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </com.omarproject1.shashah.video.VideoRecyclerView>
 
 
-    <ImageView
+
+
+
+        <ImageView
         android:id="@+id/video_player_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,11 +34,17 @@
         android:id="@+id/video_player_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter a few words to search in Shashah App"
+        android:text="@string/search_diff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/video_player_icon"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
         android:textColor="@color/black"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

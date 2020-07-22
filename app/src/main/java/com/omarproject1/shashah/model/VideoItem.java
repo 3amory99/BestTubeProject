@@ -1,19 +1,23 @@
 package com.omarproject1.shashah.model;
 
+import java.util.Date;
+
 public class VideoItem {
 
     public String videoUrl, videoTitle, videoDescription, categories, hashTags, search;
+    public Date videoDate;
 
     public VideoItem() {
     }
 
-    public VideoItem(String videoUrl, String videoTitle, String videoDescription, String categories, String hashTags, String search) {
+    public VideoItem(String videoUrl, String videoTitle, String videoDescription, String categories, String hashTags, String search, Date videoDate) {
         this.videoUrl = videoUrl;
         this.videoTitle = videoTitle;
         this.videoDescription = videoDescription;
         this.categories = categories;
         this.hashTags = hashTags;
         this.search = search;
+        this.videoDate = videoDate;
     }
 
     public String getSearch() {
@@ -46,6 +50,14 @@ public class VideoItem {
 
     public void setVideoDescription(String videoDescription) {
         this.videoDescription = videoDescription;
+    }
+
+    public Date getVideoDate() {
+        return videoDate;
+    }
+
+    public void setVideoDate(Date videoDate) {
+        this.videoDate = videoDate;
     }
 
     public String getCategories() {
