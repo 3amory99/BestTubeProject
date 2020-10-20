@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.omarproject1.shashah">
+    package="com.androidproject.besttube.vip">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".connectivity.MyApp"
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".video.MainActivity2"></activity>
+        <activity android:name=".users.UsersActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1338896604510686~3169488661" />
+
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:parentActivityName=".main.MainActivity"
+            android:theme="@style/SettingsActivity" />
+        <activity
+            android:name=".signUp.SettingsActivity"
+            android:parentActivityName=".main.MainActivity"
+            android:theme="@style/SettingsActivity" />
+        <activity android:name=".signUp.SignUpActivity" />
         <activity
             android:name=".download.DownloadActivity"
             android:theme="@style/UploadActivityTheme" />
+        <activity android:name=".search.SearchActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"/>
         <activity
-            android:name=".detailsactivity.VideoDetailsActivity"
+            android:name=".detailsActivity.VideoDetailsActivity"
+            android:parentActivityName=".profile.ProfileActivity"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity android:name=".splash.SplashActivity" />
         <activity android:name=".intro.IntroActivity">
@@ -35,14 +51,27 @@
         </activity>
         <activity android:name=".connectivity.OfflineActivity" />
         <activity
-            android:name=".main.SearchActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
-        <activity
             android:name=".upload.UploadActivity"
             android:theme="@style/UploadActivityTheme" />
         <activity
             android:name=".main.MainActivity"
-            android:theme="@style/UploadActivityTheme" />
+            android:theme="@style/MainActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.androidproject.besttube.vip.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <service android:name=".notification.MyFirebaseInstanceService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

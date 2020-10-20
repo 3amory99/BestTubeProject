@@ -1,123 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".detailsactivity.VideoDetailsActivity">
+    tools:context=".detailsActivity.VideoDetailsActivity">
 
-
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/video_in_details_activity"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        app:resize_mode="fill"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="match_parent"
+        android:background="#f2f2f2">
 
-    <TextView
-        android:id="@+id/title_details_activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Title"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/video_in_details_activity" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/video_in_details_activity">
-
-        <ImageButton
-            android:id="@+id/share_video_details_activity"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="end|center_horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/ic_share" />
-
-
-        <ImageButton
-            android:id="@+id/download_video_details_activity"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="end|center_horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/ic_download"/>
-
-        <TextView
-            android:id="@+id/like_counter_details_activity"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="99"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:gravity="center_vertical"
-            />
-
-
-        <ImageButton
-            android:id="@+id/like_video_details_activity"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="end|center_horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/ic_dislike"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/expandable_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_details_activity">
-
-        <TextView
-            android:id="@+id/description_details_activity"
+        <com.androidproject.besttube.vip.video.VideoRecyclerView
+            android:id="@+id/video_details_recycler_view"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </com.androidproject.besttube.vip.video.VideoRecyclerView>
+
+
+        <ImageView
+            android:id="@+id/video_player_icon_details_activity"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Celebrate who you are in your deepest heart. Love yourself and the world will love you.."
-            android:textColor="@android:color/black" />
+            android:src="@drawable/ic_video_player"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/video_player_text_details_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/this_page_has_no_videos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/video_player_icon_details_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:textColor="@color/black"/>
 
-    <TextView
-        android:id="@+id/show_more"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Show more.."
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/expandable_view" />
 
-
-    <TextView
-        android:id="@+id/video_hashTag_details_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center_horizontal"
-        android:text="#love #religious #games #sports #children"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/show_more" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

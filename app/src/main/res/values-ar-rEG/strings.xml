@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">شاشة</string>
+    <string name="app_name">Best Tube</string>
     <string name="home">الرئيسية</string>
-    <string name="love">حب</string>
+    <string name="sports">رياضة</string>
     <string name="children">أطفال</string>
     <string name="games">العاب</string>
     <string name="religious">ديني</string>
@@ -14,6 +14,17 @@
     <string name="help_privacy">المساعدة والخصوصية</string>
     <string name="choose_language">أختار اللغة</string>
     <string name="version_1_0">أصدار النسخة 1.0</string>
+
+
+    <string-array name="video_categories">
+        <item>منوعات</item>
+        <item>رياضة</item>
+        <item>تعليمي</item>
+        <item>ديني</item>
+        <item>أطفال</item>
+
+    </string-array>
+
     <string name="delete_video">هل تريد حذف هذا الفيديو ؟</string>
     <string name="cancel">ٳلغاء</string>
     <string name="delete">مسح</string>
@@ -30,24 +41,23 @@
     <string name="not_connected">غير متصل بالانترنت</string>
     <string name="next">التالي</string>
     <string name="skip">تخطي</string>
-    <string name="mono3at_intro_title">مرحباً بك فى تطبيق شاشة</string>
+    <string name="mono3at_intro_title">مرحباً بك فى تطبيق Best Tube</string>
     <string name="mono3at_intro_description">يمكنك الأن تحميل و مشاهدة الفيديوهات بسهوله وبسرعه أعلي ودقة عاليه ايضاً.</string>
-    <string name="children_intro_title">أترك لطفلك التسلية والمتعة</string>
+    <string name="children_intro_title">أترك لطفلك التسلية والمتعة من خلال مشاهدة محتوانا.</string>
     <string name="children_intro_description">محتوانا الخاص والجديد قادرا علي تشكيل عقل طفلك للأبداع من خلال استلهام الفيديوهات الهادفه.</string>
-    <string name="games_intro_title">أقوي فيديوهات الالعاب واكثرها تشويقاً</string>
-    <string name="games_intro_description">تابع حصريا محترفين الالعاب الشهيره و ايضاً مشاهدة فيديوهات بابجي الشهيره.</string>
-    <string name="religious_intro_title">أخفض صوت العالم و أرفع صوت القرأن من خلال الفيديوهات الدينيه</string>
-    <string name="religious_intro_description">أستمع و شاهد أجمل الأصوات و الأناشيد الدينيه من خلال منصتنا لبعض القراء و المنشدين</string>
-    <string name="love_intro_title">شاهد وحمل حالات الواتس اب و استمتع بالاغاني والموسيقي</string>
-    <string name="love_intro_description">أجمد الفيديوهات الرومانسيه 2020 شاهد وحمل الان اجمد حالات واتس اب الشهيره.</string>
+    <string name="education_intro_title">شاهد وحمل محتوانا التعليمي المجاني.</string>
+    <string name="education_intro_description">نقدم لكم سلاسل تعليميه هادفه لجميع الفئات العمريه مقدمه من متخصصين في الجانب التعليمي.</string>
+    <string name="religious_intro_title">أخفض صوت العالم و أرفع صوت القرأن من خلال الفيديوهات الدينيه.</string>
+    <string name="religious_intro_description">أستمع و شاهد أجمل الأصوات و الأناشيد الدينيه من خلال منصتنا لبعض القراء و المنشدين. </string>
+    <string name="sports_intro_title">عرض أفضل الفيديوهات الرياضية لجميع الرياضات.</string>
+    <string name="sports_intro_description">شاهد الفيديوهات الرياضية واستمتع بمشاهدة لقطات رائعه في عالم الرياضه من كرة قدم، سباحة،كرة طائره، وكرة السله وغيرها من الرياضات الأخري.</string>
     <string name="post_detatils">عرض المحتوي</string>
     <string name="start_downloading">بدء تحميل الفيديو..</string>
     <string name="download">تحميل</string>
-    <string name="download_content">تطبيق شاشة يتيح لك تنزيل الفيديوهات علي هاتفك بسهوله عن طريق نقره واحده فقط شاهد الفيديوهات الرائعه عبر التطبيق ماذا تنتظر!</string>
     <string name="video_name">أسم الفيديو</string>
     <string name="this_page_has_no_videos">لا يوجد فيديوهات حاليا في هذه الصفحه</string>
     <string name="video_uploaded">تم رفع وتخزين الفيديو بنجاح</string>
-    <string name="search_diff">أدخل القليل من الكلمات في موضع البحث أعلي وقم بالبحث في تطبيق شاشة</string>
+    <string name="search_diff">أدخل القليل من الكلمات في موضع البحث أعلي وقم بالبحث في تطبيق Best Tube</string>
     <string name="no_videos_founded">لم يتم العثور علي فيديوهات</string>
     <string name="video_already_deleted">تم مسح هذا الفيديو بالفعل، قم بتحديث الصفحة!</string>
     <string name="no_selected_videos">لم يتم تحديد الفيديو</string>
@@ -55,6 +65,45 @@
     <string name="enter_video_title">أدخل عنوان للفيديو</string>
     <string name="enter_video_description">أدخل وصف للفيديو</string>
     <string name="failed_on_uploading">خطأ أثناء رفع الفيديو</string>
+    <string name="unable_to_open_file">توجد مشكله في تشغيل الفيديو</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="verify">تأكيد</string>
+    <string name="welcome_to_best_tube">مرحباً في تطبيق Best Tube</string>
+    <string name="authentication_description">بعد كتابة رقم هاتفك، أضغط تأكيد للمصادقة، ثم أنتظر 60 ثانية للحصول علي كود التأكيد الخاص بك</string>
+    <string name="sign_in">Sign in :</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="verification_content">انتظر قليلأ للتحقق تلقائيًا من رسالة SMS مرسلة إلى رقم هاتفك المحمول</string>
+    <string name="code">"+2"</string>
+    <string name="verify_code">مطابقة الكود</string>
+    <string name="question_resend">لم يتم أستلام كود التأكيد؟</string>
+    <string name="enter_phone_number">من فضلك أدخل رقم الهاتف</string>
+    <string name="enter_valid_number">من فضلك أدخل رقم هاتف صحيح</string>
+    <string name="register_successfully">تم تسجيل الدخول بنجاح</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="log_out_successfully">تم تسجيل الخروج بنجاح</string>
+    <string name="resend"> ٳعادة أرسال</string>
+    <string name="upload_video">نشر فيديو</string>
+    <string name="edit">تعديل</string>
+    <string name="long_click">نقرة</string>
+    <string name="download_content">تطبيق Best Tube يتيح لك تنزيل الفيديوهات علي هاتفك بسهوله عن طريق نقره واحده فقط شاهد الفيديوهات الرائعه عبر التطبيق ماذا تنتظر!</string>
+    <string name="download_alert_message">تحميل أفضل الفيديوهات</string>
+    <string name="name">الأسم</string>
+    <string name="about">نبذة عنك</string>
+    <string name="finish">ٳنهاء التسجبل</string>
+    <string name="enter_your_name">أدخل أسم المستحدم</string>
+    <string name="name_description">هذا يعتبر أسم المستخدم الخاص بك، هذا الأسم سيظهر لباقي مستخدمين التطبيق</string>
+    <string name="save">حفظ</string>
+    <string name="get_started">بدء الأستخدام</string>
+    <string name="update">تحديث</string>
+    <string name="videos_number">0 فيديوهات</string>
+    <string name="videos">فيديوهات</string>
+    <string name="profile">الصفحة الشخصية</string>
+    <string name="no_videos_yet">لا توجد مقاطع فيديو الآن</string>
+    <string name="people">الأشخاص</string>
+    <string name="no_user_found">لم يتم العثور علي أشخاص</string>
+    <string name="education">تعليمي</string>
+    <string name="failed_to_upload_image">حدث خطأ في رفع الصوره الشخصيه حاول مره أخري</string>
+
 
 
 </resources>

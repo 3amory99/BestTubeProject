@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Shashah</string>
+    <string name="app_name">Best Tube</string>
     <string name="home">Home</string>
-    <string name="love">Love</string>
+    <string name="sports">Sports</string>
     <string name="children">Children</string>
     <string name="games">Games</string>
     <string name="religious">Religious</string>
@@ -11,24 +11,16 @@
     <string name="language">Language</string>
     <string name="share">Share</string>
     <string name="help_privacy">Help and Privacy</string>
-    <string name="choose_language">Chosse language</string>
+    <string name="choose_language">Choose language</string>
     <string name="version_1_0">Version 1.0</string>
 
-    <!--    <string-array name="video_categories">-->
-    <!--        <item>منوعات</item>-->
-    <!--        <item>حب</item>-->
-    <!--        <item>العاب</item>-->
-    <!--        <item>ديني</item>-->
-    <!--        <item>أطفال</item>-->
-    <!--        <item>رياضة</item>-->
-    <!--    </string-array>-->
 
     <string-array name="video_categories">
-        <item>Mono3at</item>
-        <item>Love</item>
-        <item>Games</item>
-        <item>Religious</item>
-        <item>Children</item>
+        <item>منوعات</item>
+        <item>رياضة</item>
+        <item>تعليمي</item>
+        <item>ديني</item>
+        <item>أطفال</item>
 
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
@@ -49,24 +41,24 @@
     <string name="not_connected">No Internet Connected.</string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
-    <string name="mono3at_intro_title">Welcome to Shashah App</string>
-    <string name="mono3at_intro_description">Easily, You can now watch videos and with higher speed and high accuracy as wellً.</string>
+    <string name="mono3at_intro_title">Welcome to Best Tube App</string>
+    <string name="mono3at_intro_description">Easily, you can now watch videos and with higher speed and high quality as wellً.</string>
     <string name="children_intro_title">Leave the fun and enjoyment to your child</string>
     <string name="children_intro_description">Our new and special content is able to shape your child\'s mind for creativity by inspiring targeted videos.</string>
-    <string name="games_intro_title">The most interesting and exciting gaming videos</string>
-    <string name="games_intro_description">Exclusively follow the professional gamers and also watch the popular PUBG videos.</string>
+    <string name="education_intro_title">Watch and download our free educational content</string>
+    <string name="education_intro_description">We introduce you targeted educational chains for all ages provided by instructors in the educational aspect.</string>
     <string name="religious_intro_title">Decline the world and raise the voice of the Qur\'an through religious videos</string>
     <string name="religious_intro_description">Watch and listen to the most beautiful voices and islamic chants through our platform for some Qur\'an readers and islamic chants.</string>
-    <string name="love_intro_title">Watch and download WhatsApp status videos and enjoy songs and music</string>
-    <string name="love_intro_description">The most romantic videos of 2020 Watch and download now the most famous WhatsApp status videos.</string>
+    <string name="sports_intro_title">Show the best sports videos for all sports.</string>
+    <string name="sports_intro_description">Watch sports videos and enjoy watching great video clips in the sports world from football, swimming, volleyball, basketball and other sports.</string>
     <string name="post_detatils">Post Details</string>
     <string name="start_downloading">Start downloading video..</string>
     <string name="download">Download</string>
-    <string name="download_content">Shashah app that allows you to download videos to your phone easily with just one click. Watch the amazing videos through the application. What are you waiting for!</string>
+    <string name="download_content">Best Tube app that allows you to download videos to your phone easily with just one click. Watch the amazing videos through the application. What are you waiting for!</string>
     <string name="video_name">Video Name</string>
     <string name="this_page_has_no_videos">This page has no videos to show</string>
     <string name="video_uploaded">Video Uploaded Successfully</string>
-    <string name="search_diff">Enter a few words to search in Shashah App</string>
+    <string name="search_diff">Enter a few words to search in Best Tube App</string>
     <string name="no_videos_founded">No Videos founded</string>
     <string name="video_already_deleted">This video has already been deleted, refresh this page!</string>
     <string name="no_selected_videos">No selected videos</string>
@@ -74,6 +66,44 @@
     <string name="enter_video_title">Enter video title</string>
     <string name="enter_video_description">Enter video description</string>
     <string name="failed_on_uploading">Failed on uploading</string>
+    <string name="unable_to_open_file">Unable to open video</string>
+    <string name="phone_number">Phone number</string>
+    <string name="verify">Verify</string>
+    <string name="welcome_to_best_tube">Welcome to Best Tube App</string>
+    <string name="authentication_description">After entering your phone number, click verify to authenticate yourself then wait 60 seconds to get the OTP and procode.</string>
+    <string name="sign_in">Sign in :</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="verification_content">Wait to automatically detect an SMS sent to your mobile number</string>
+    <string name="verify_code">Verify Code</string>
+    <string name="code">"+2"</string>
+    <string name="question_resend">Did not receive the OTP code?</string>
+    <string name="enter_phone_number">Enter your phone number</string>
+    <string name="enter_valid_number">Enter a valid number</string>
+    <string name="register_successfully">You have register successfully</string>
+    <string name="log_out">Log out</string>
+    <string name="log_out_successfully">Log out successfully</string>
+    <string name="resend">" Resend"</string>
+    <string name="upload_video">Upload video</string>
+    <string name="edit">Edit</string>
+    <string name="long_click">Just one click</string>
+    <string name="download_alert_message">Download Option</string>
+    <string name="name">Name</string>
+    <string name="about">About</string>
+    <string name="finish">Finish</string>
+    <string name="save">Save</string>
+    <string name="get_started">Get Started</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="name_description">This is your username will be visible to all application users</string>
+    <string name="update">Update</string>
+    <string name="videos_number">0 videos</string>
+    <string name="videos">Videos</string>
+    <string name="profile">Profile</string>
+    <string name="no_videos_yet">No Videos Yet</string>
+    <string name="people">People</string>
+    <string name="no_user_found">No user found</string>
+    <string name="education">Education</string>
+    <string name="failed_to_upload_image">Failed to upload image, try again!</string>
+
 
 
 </resources>

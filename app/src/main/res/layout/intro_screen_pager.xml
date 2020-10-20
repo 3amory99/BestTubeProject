@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="360dp" />
+        app:layout_constraintGuide_begin="350dp" />
 
     <TextView
 
@@ -23,7 +23,7 @@
         android:text="TextView"
         android:textColor="@color/black"
         android:gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:fontFamily="@font/cairo_regular"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -36,10 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:fontFamily="@font/cairo_light"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="15dp"
         android:padding="10dp"
         android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -32,18 +32,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/videoView_cardView" />
-
                 <Button
                     android:id="@+id/add_video"
                     android:layout_width="wrap_content"
@@ -59,32 +47,20 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/progressBar" />
+                    app:layout_constraintTop_toBottomOf="@id/videoView_upload" />
 
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/videoView_cardView"
+                <VideoView
+                    android:id="@+id/videoView_upload"
                     android:layout_width="match_parent"
-                    android:layout_height="230dp"
-                    android:layout_marginTop="60dp"
-                    android:elevation="8dp"
-                    app:cardBackgroundColor="#243447"
-                    app:cardCornerRadius="8dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="70dp"
+                    app:backgroundTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <VideoView
-                        android:id="@+id/videoView_upload"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="@color/black"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.cardview.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/title_layout"
@@ -114,7 +90,7 @@
                             android:layout_height="35dp"
                             android:background="@drawable/back_edittext2"
                             android:hint="@string/video_title"
-                            android:maxLength="30"
+                            android:maxLength="100"
                             android:textColor="@android:color/black"
                             android:textSize="16sp" />
 
@@ -122,106 +98,6 @@
 
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/description_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/back_edittext"
-                    android:padding="5dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/title_layout">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/line1_description"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="10dp"
-                            android:text="@string/video_description"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/description_length"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="5dp"
-                            android:text="0/150"
-                            android:textColor="#EBC502"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <EditText
-                        android:id="@+id/description_txt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/back_edittext2"
-                        android:hint="@string/description_hint"
-                        android:maxLength="150"
-                        android:padding="10dp"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp"
-                        android:theme="@style/TextLabel"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/line1_description" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <LinearLayout
-                    android:id="@+id/Hashtag_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/back_edittext"
-                    android:orientation="vertical"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/description_layout">
-
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:textColorHint="@android:color/black"
-                        android:theme="@style/TextLabel"
-                        app:counterMaxLength="30">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/video_hashTag"
-                            android:layout_width="match_parent"
-                            android:layout_height="35dp"
-                            android:background="@drawable/back_edittext2"
-                            android:hint="@string/Video_Hash_tags"
-                            android:maxLength="50"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
 
                 <Spinner
                     android:id="@+id/categories_spinner"
@@ -234,10 +110,24 @@
                     android:spinnerMode="dialog"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/Hashtag_layout" />
+                    app:layout_constraintTop_toBottomOf="@id/title_layout" />
+
+
+                <ImageView
+                    android:id="@+id/upload_thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_intro_mono3at"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/categories_spinner"/>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 
             <androidx.constraintlayout.widget.ConstraintLayout

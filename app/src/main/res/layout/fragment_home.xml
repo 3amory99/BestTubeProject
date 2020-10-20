@@ -12,13 +12,13 @@
         android:layout_height="match_parent"
         android:background="#f2f2f2">
 
-        <com.omarproject1.shashah.video.VideoRecyclerView
+        <com.androidproject.besttube.vip.video.VideoRecyclerView
             android:id="@+id/recycler_view_mono3at"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        </com.omarproject1.shashah.video.VideoRecyclerView>
+        </com.androidproject.besttube.vip.video.VideoRecyclerView>
 
 
         <ImageView

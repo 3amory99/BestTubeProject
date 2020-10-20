@@ -6,21 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".intro.IntroActivity">
 
-
     <Button
         android:id="@+id/skip_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:background="@android:color/transparent"
-        android:drawableLeft="@drawable/ic_black"
+        android:drawableRight="@drawable/ic_back"
         android:text="@string/skip"
         android:textAllCaps="false"
         android:textSize="17sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
         />
@@ -30,7 +29,7 @@
         android:id="@+id/intro_slides"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:padding="20dp"
         app:layout_constraintBottom_toTopOf="@id/next_btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,16 +55,17 @@
         android:id="@+id/getStart_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="35dp"
         android:background="@drawable/button_shape"
-        android:backgroundTint="@color/gray"
-        android:text="Get Started"
+        android:backgroundTint="@color/alber_michel"
+        android:text="@string/get_started"
         android:textColor="@color/colorPrimaryDark"
         android:textAllCaps="false"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/intro_slides" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout_indicator"
